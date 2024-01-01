@@ -1,15 +1,12 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [
-    "./src/**/*.{js,jsx,ts,tsx}",
-  ],
+  content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     screens: {
-      'sm': '375px',
-      'md': '768px',
-      'lg': '1440px',
+      sm: "375px",
+      md: "768px",
+      lg: "1440px",
     },
   },
-  plugins: [],
-}
-
+  plugins: [require("@tailwindcss/forms")],
+};
