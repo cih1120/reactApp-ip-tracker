@@ -1,8 +1,9 @@
 import { useContext, useEffect } from "react";
-import "leaflet/dist/leaflet.css";
 import { MapContainer, TileLayer, Marker, Popup, useMap } from "react-leaflet";
+import { Icon, LatLngExpression } from "leaflet";
+import "leaflet/dist/leaflet.css";
 import { IpContext } from "../../store/IpStore";
-import { LatLngExpression } from "leaflet";
+import LocationIcon from "@/assets/locationIcon.png";
 
 function MapUpdater({ center }: { center: LatLngExpression }) {
   const map = useMap();
@@ -11,6 +12,11 @@ function MapUpdater({ center }: { center: LatLngExpression }) {
   }, [center, map]);
   return null;
 }
+
+const skater = new Icon({
+  iconUrl: LocationIcon,
+  iconSize: [35, 46],
+});
 
 export default function Map() {
   const { state } = useContext(IpContext);
@@ -26,10 +32,8 @@ export default function Map() {
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
-      <Marker position={[lat, lng]}>
-        <Popup>
-          A pretty CSS3 popup. <br /> Easily customizable.
-        </Popup>
+      <Marker position={[lat, lng]} icon={skater}>
+        <Popup>Here is the IP Address you were looking for!</Popup>
       </Marker>
       <MapUpdater center={[lat, lng]} />
     </MapContainer>
