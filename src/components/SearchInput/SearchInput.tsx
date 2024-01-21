@@ -9,19 +9,24 @@ export default function SearchInput() {
   const [isError, setIsError] = useState(false);
   const [isDisabled, setIsDisabled] = useState(false);
   const { dispatch } = useContext(IpContext);
+  const IPv2Regex = new RegExp(
+    "^((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?).){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$",
+  );
 
   async function onSubmit() {
     setIsDisabled(true);
-    if (ipAddressInput !== "") {
+    if (ipAddressInput !== "" && IPv2Regex.test(ipAddressInput)) {
       fetchIpAddress(ipAddressInput)
         .then((res) => {
+          console.log(res);
+
           dispatch({ type: "setIpData", payload: res.data });
         })
         .catch((err) => {
           toast.error(err.message);
         });
     } else {
-      toast.error("Please fill in the IP Address");
+      toast.error("Please ensure a correct IP address format is entered.");
       setIsError(true);
     }
     setIsDisabled(false);
