@@ -9,6 +9,8 @@ export interface IFetchIpAddressRes {
     country: string,
     region: string,
     timezone: string
+    lat: number,
+    lng: number,
   },
   as: {
     asn: number,
