@@ -4,12 +4,12 @@ import SearchInput from "../SearchInput";
 
 export default function Hero() {
   return (
-    <header className="relative flex min-h-[300px] w-screen items-center">
+    <header className="relative flex min-h-[250px] w-screen items-center md:min-h-[300px]">
       <div className="relative z-10 w-full">
         <h1 className="text-center text-lg font-bold text-white">IP Address</h1>
         <SearchInput />
       </div>
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 h-full">
         <img src={heroPatternDesktop} className="hidden h-full w-full object-cover sm:block" />
         <img src={heroPatternMobile} className="block h-full w-full object-cover sm:hidden" />
       </div>

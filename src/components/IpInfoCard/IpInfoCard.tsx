@@ -33,20 +33,22 @@ export default function IpInfoCard() {
     },
   ];
   return (
-    <ul className="relative z-10 mx-2 -mt-9 flex max-w-5xl flex-col justify-between gap-5 rounded-lg bg-white p-6 shadow-xl md:mx-auto md:flex-row">
-      {IpConfig.map((item) => {
-        return (
-          <li
-            key={item.title}
-            className="flex w-full justify-center border-solid border-slate-300 last:border-0 md:w-3/12 md:border-r"
-          >
-            <div className="text-center font-medium md:text-left">
-              <h5 className="text-sm text-slate-500">{item.title}</h5>
-              <p className="text-lg">{item.data ? item.data : ""}</p>
-            </div>
-          </li>
-        );
-      })}
-    </ul>
+    <div className="relative z-[999] mx-auto  w-[80%] max-w-5xl">
+      <ul className="absolute -top-[50px] flex w-full flex-col justify-between gap-5 rounded-lg bg-white p-6 shadow-xl md:flex-row">
+        {IpConfig.map((item) => {
+          return (
+            <li
+              key={item.title}
+              className="flex w-full justify-center border-solid border-slate-300 last:border-0 md:w-3/12 md:border-r"
+            >
+              <div className="text-center font-medium md:text-left">
+                <h5 className="text-sm text-slate-500">{item.title}</h5>
+                <p className="text-lg">{item.data ? item.data : ""}</p>
+              </div>
+            </li>
+          );
+        })}
+      </ul>
+    </div>
   );
 }

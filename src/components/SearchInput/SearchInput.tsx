@@ -28,7 +28,7 @@ export default function SearchInput() {
   }
 
   return (
-    <div className="mx-auto flex w-full max-w-[556px]">
+    <div className="mx-auto flex w-11/12 max-w-[556px] md:w-full">
       <input
         type="text"
         name="ipAddress"
