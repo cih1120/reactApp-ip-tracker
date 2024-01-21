@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export const API_URLS = {
-  IPGeolocation: "https://geo.ipify.org/api/v2/country?"
+  IPGeolocation: "https://geo.ipify.org/api/v2/country,city?",
 }
 const TIMEOUT = 65000;
 

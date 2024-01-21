@@ -5,6 +5,8 @@ export enum IpConfigKeys {
   location = "location",
   timeZone = "timeZone",
   isp = "isp",
+  lat = "lat",
+  lng = "lng",
 }
 
 export type InitialStateType = {
@@ -12,6 +14,8 @@ export type InitialStateType = {
   [IpConfigKeys.location]: string | null;
   [IpConfigKeys.timeZone]: string | null;
   [IpConfigKeys.isp]: string | null;
+  [IpConfigKeys.lat]: number | null;
+  [IpConfigKeys.lng]: number | null;
 };
 
 export const initialState: InitialStateType = {
@@ -19,6 +23,8 @@ export const initialState: InitialStateType = {
   [IpConfigKeys.location]: null,
   [IpConfigKeys.timeZone]: null,
   [IpConfigKeys.isp]: null,
+  [IpConfigKeys.lat]: null,
+  [IpConfigKeys.lng]: null,
 };
 
 type IpContextType = {

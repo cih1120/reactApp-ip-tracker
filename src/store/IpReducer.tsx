@@ -13,6 +13,8 @@ export default function IpReducer(state: InitialStateType, action: ActionTypes) 
         location: payload.location.country,
         timeZone: payload.location.timezone,
         isp: payload.isp,
+        lat: payload.location.lat,
+        lng: payload.location.lng,
       };
     default:
       return state;
