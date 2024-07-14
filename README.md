@@ -1,5 +1,7 @@
 # reactApp-ip-tracker
 
+<img width="500" alt="截圖 2024-07-14 下午9 20 28" src="https://github.com/user-attachments/assets/341faf2e-b506-4ceb-8b4e-6ece7de5ed93">
+
 這是`reactApp-ip-tracker`專案，使用者可以在搜尋欄輸入IP地址，並獲取該IP的IP Address、Location、TimeZone、ISP資訊。這些資訊會通過IP Geolocation API獲取，並使用Leaflet展示該IP在地圖上的位置。
 
 ## 專案描述
