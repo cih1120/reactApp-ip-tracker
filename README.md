@@ -1,30 +1,16 @@
-# React + TypeScript + Vite
+# reactApp-ip-tracker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+這是`reactApp-ip-tracker`專案，使用者可以在搜尋欄輸入IP地址，並獲取該IP的IP Address、Location、TimeZone、ISP資訊。這些資訊會通過IP Geolocation API獲取，並使用Leaflet展示該IP在地圖上的位置。
 
-Currently, two official plugins are available:
+## 專案描述
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+IP Tracker是一個簡單的應用，讓使用者可以輸入IP地址並查詢該IP的詳細資訊，並在地圖上可視化展示。此專案使用React、Leaflet和IP Geolocation API來實現。
 
-## Expanding the ESLint configuration
+## 功能清單
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- 搜索IP地址
+- 顯示IP地址的詳細資訊（IP Address、Location、TimeZone、ISP）
+- 使用Leaflet在地圖上顯示IP地址的位置
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## 聯絡方式
+開發者：念慈 (Hannah) Email: a22483268@gmail.com
